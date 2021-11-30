@@ -16,7 +16,7 @@
 “Users can only access authorized information and operations and are enforced to follow the intended workflow provided by the web application”
 
 ### Table of Contents
-1. [Abusing Workflows](#Abusing-Workflows)
+1. [Abusing Workflows](#Abusing Workflows)
 2. [Exploit Policies and Practices](#Exploit-Policies-and-Practices)
 3. [Induction](#Induction)
     - [Authentication parameters and privilege escalation](#Authentication-parameters-and-privilege-escalation)
