@@ -42,8 +42,6 @@
 
 ##
 
-<h3 align="center"> -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- </h3>
-
 ## Abusing Workflows :
 
 [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
@@ -61,11 +59,11 @@ e.g , the attackers exploited a business policy of “one vote equals one person
 
 information provided within the code and behavior of the web application
 
-• It is possible for an attacker to carry out some form of induction from suspicious easily guessable/predictable parameter names and predict, forge or manipulate legitimate requests
-• Parameter names in most HTTP GET and POST requests in the form of name/value pairs, XML, JSON or Cookies are guessable, predictable and can be tampered with, as a result.
-• Sometimes, this may require a combination of logical guessing, brute-forcing and creative tampering to decipher the logic
+- It is possible for an attacker to carry out some form of induction from suspicious easily guessable/predictable parameter names and predict, forge or manipulate legitimate requests
+- Parameter names in most HTTP GET and POST requests in the form of name/value pairs, XML, JSON or Cookies are guessable, predictable and can be tampered with, as a result.
+- Sometimes, this may require a combination of logical guessing, brute-forcing and creative tampering to decipher the logic
 
-  ### Authentication parameters and privilege escalation:
+  * ### Authentication parameters and privilege escalation:
    	• Applications can manage access control lists and privileges, any authenticated user has access to some internal parts of the application </br>
    	• if authorization implementation is weak, it could likely include problems such as accessing another user’s account or acquiring greater permissions than what was originally assigned at login
    • if an application passes ACLs as cookies at time of authentication, this information can be tampered and exploited, A certain parameter becomes a target if the parameter name suggests ACL or permissions
