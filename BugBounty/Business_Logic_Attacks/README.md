@@ -15,7 +15,7 @@
 
 “Users can only access authorized information and operations and are enforced to follow the intended workflow provided by the web application”
 
-### Table of Contents
+## Table of Contents
 1. [Abusing Workflows](#Abusing-Workflows)
 2. [Exploit Policies and Practices](#Exploit-Policies-and-Practices)
 3. [Induction](#Induction)
@@ -42,7 +42,7 @@
 
 <h3 align="center"> -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- </h3>
 
-### Abusing Workflows :
+## Abusing Workflows :
 
 [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
 
@@ -51,11 +51,11 @@ b) Going through steps out of order or skipping steps that will normally verify 
 c) Repeating a step or series of steps
 d) Performing an unexpected action
 
-### Exploit policies and practices :
+## Exploit policies and practices :
 
 e.g , the attackers exploited a business policy of “one vote equals one person” because the website had no rate limit, authentication nor validation mechanism.
 
-### Induction : 
+## Induction : 
 
 information provided within the code and behavior of the web application
 
@@ -63,14 +63,14 @@ information provided within the code and behavior of the web application
 • Parameter names in most HTTP GET and POST requests in the form of name/value pairs, XML, JSON or Cookies are guessable, predictable and can be tampered with, as a result.
 • Sometimes, this may require a combination of logical guessing, brute-forcing and creative tampering to decipher the logic
 
-  #### Authentication parameters and privilege escalation:
-   • Applications can manage access control lists and privileges, any authenticated user has access to some internal parts of the application
-   • if authorization implementation is weak, it could likely include problems such as accessing another user’s account or acquiring greater permissions than what was originally assigned at login
+  ### Authentication parameters and privilege escalation:
+   	• Applications can manage access control lists and privileges, any authenticated user has access to some internal parts of the application </br>
+   	• if authorization implementation is weak, it could likely include problems such as accessing another user’s account or acquiring greater permissions than what was originally assigned at login
    • if an application passes ACLs as cookies at time of authentication, this information can be tampered and exploited, A certain parameter becomes a target if the parameter name suggests ACL or permissions
    • The target value is now evaluated, predicted and tampered
    • The value to be tampered may be hex, binary, string, etc and tampering can involve changing bit patterns (1 to 0) or permission flags (Y to N, R to W)
 
-	b. Critical Parameter Manipulation and Access to Unauthorized Information/Content:
+  #### Critical Parameter Manipulation and Access to Unauthorized Information/Content:
 
 		• When the business logic of an application is processing parameters such as name-value pairs (which are guessable and can be tampered with), without proper validation, this allows a malicious user to perform unauthorized functions.
 		• e.g : An application, after authentication, allows the user to request authorized functions and while making these requests, some parameters are being supplied to the application such as the “accountid” parameter. If this parameter is easily guessable, then an attacker can successfully inject another user’s accountid
