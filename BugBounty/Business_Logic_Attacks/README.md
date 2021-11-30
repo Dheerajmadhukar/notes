@@ -42,7 +42,7 @@
 
 ### BLA [Business Logic Attacks]:
 
-1. Abusing Workflows: [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
+## Abusing Workflows: [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
 
 	a) Changing requests in a code path from HTTP POST to GET or vice versa
 	b) Going through steps out of order or skipping steps that will normally verify or validate an action or information
