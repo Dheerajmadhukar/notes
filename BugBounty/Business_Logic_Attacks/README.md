@@ -40,9 +40,9 @@
 9. [Computing Fundamentals](#Computing-Fundamentals)
 10. [Hacking Basics](#Hacking-Basics)
 
-### BLA [Business Logic Attacks]:
 
-## Abusing Workflows 
+
+1. ### Abusing Workflows 
 
 [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
 
@@ -51,7 +51,7 @@
 	c) Repeating a step or series of steps
 	d) Performing an unexpected action
 
-2. Exploit policies and practices:
+2. ### Exploit policies and practices:
 
 	e.g , the attackers exploited a business policy of “one vote equals one person” because the website had no rate limit, authentication nor validation mechanism.
 
