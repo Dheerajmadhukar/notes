@@ -40,9 +40,9 @@
 9. [Computing Fundamentals](#Computing-Fundamentals)
 10. [Hacking Basics](#Hacking-Basics)
 
+<h3 align="center"> -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- </h3>
 
-
-### 1. Abusing Workflows :
+### Abusing Workflows :
 
 [For example, in the normal workflow of an application from A to B to C, an attacker to skip the straight line from A to C or go back to A from C]
 
@@ -51,7 +51,7 @@ b) Going through steps out of order or skipping steps that will normally verify 
 c) Repeating a step or series of steps
 d) Performing an unexpected action
 
-### 2. Exploit policies and practices :
+### Exploit policies and practices :
 
 e.g , the attackers exploited a business policy of “one vote equals one person” because the website had no rate limit, authentication nor validation mechanism.
 
@@ -63,13 +63,12 @@ information provided within the code and behavior of the web application
 • Parameter names in most HTTP GET and POST requests in the form of name/value pairs, XML, JSON or Cookies are guessable, predictable and can be tampered with, as a result.
 • Sometimes, this may require a combination of logical guessing, brute-forcing and creative tampering to decipher the logic
 
-	a. ### Authentication parameters and privilege escalation:
-
-		• Applications can manage access control lists and privileges, any authenticated user has access to some internal parts of the application
-		• if authorization implementation is weak, it could likely include problems such as accessing another user’s account or acquiring greater permissions than what was originally assigned at login
-		• if an application passes ACLs as cookies at time of authentication, this information can be tampered and exploited, A certain parameter becomes a target if the parameter name suggests ACL or permissions
-		• The target value is now evaluated, predicted and tampered
-		• The value to be tampered may be hex, binary, string, etc and tampering can involve changing bit patterns (1 to 0) or permission flags (Y to N, R to W)
+  #### Authentication parameters and privilege escalation:
+   • Applications can manage access control lists and privileges, any authenticated user has access to some internal parts of the application
+   • if authorization implementation is weak, it could likely include problems such as accessing another user’s account or acquiring greater permissions than what was originally assigned at login
+   • if an application passes ACLs as cookies at time of authentication, this information can be tampered and exploited, A certain parameter becomes a target if the parameter name suggests ACL or permissions
+   • The target value is now evaluated, predicted and tampered
+   • The value to be tampered may be hex, binary, string, etc and tampering can involve changing bit patterns (1 to 0) or permission flags (Y to N, R to W)
 
 	b. Critical Parameter Manipulation and Access to Unauthorized Information/Content:
 
