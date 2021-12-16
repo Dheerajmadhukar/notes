@@ -151,10 +151,10 @@ Information provided within the code and behavior of the web application
 ## * METHODOLOGY FOR ATTACKING BUSINESS LOGIC VULNERABILITIES IN WEB APPLICATIONS *
 
 ### The methodology is divided into 4 phases:
-&emsp;&emsp;**1. Profiling phase**
-&emsp;&emsp;**2. Analysis phase**
-&emsp;&emsp;**3. Test/Attack phase**
-&emsp;&emsp;**4. Evaluation phase**
+&emsp;&emsp;**1. Profiling phase** <br>
+&emsp;&emsp;**2. Analysis phase** <br>
+&emsp;&emsp;**3. Test/Attack phase** <br>
+&emsp;&emsp;**4. Evaluation phase** <br>
 
 ***MIND MAP: [METHODOLOGY FOR ATTACKING BUSINESS LOGIC VULNERABILITIES IN WEB APPLICATIONS]***
 
@@ -202,7 +202,88 @@ Information provided within the code and behavior of the web application
 >•&emsp;Information concerning services running, operating systems and versions and possible devices such as firewalls, can be gathered amongst others
 
 ### &emsp;2. <u>Analysis Phase</u>:
-	
+&emsp; The purpose of this phase is to critically analyze the interesting aspects of information gathered from the profiling phase.
+
+>•&emsp;Analyze what kind of site it is. Development sites are prone to many attacks, business logic attacks inclusive.
+
+>•&emsp;Identify and analyze flows concerning critical business functionalities like check-out, wire transfer, login etc.
+
+>•&emsp;Identify and analyze possible restrictions based on the critical flows (sessions, access controls).
+
+>•&emsp;Analyze HTTP GET/POST requests of all interesting pages.
+
+>•&emsp;Analyze directory, file, and URL naming conventions including file call functionalities based on parameter names.
+
+>•&emsp;Identify all application entry points, possible error creators, possible file inclusions (dig deeper into JavaScript)
+
+>•&emsp;Analyze visible policies such as password recovery options. Look for loopholes in the policies
+
+>•&emsp;Analyze client-side applications (for example, Adobe Flash, Java, Silverlight etc) for possible information disclosure or induction
+
+>•&emsp;Analyze parameter names in interesting HTTP GET and POST requests in the form of name/value pairs, XML, JSON or Cookies.
+
+>•&emsp;Especially analyze all cookies delivered during the profiling, look for incrementing easily guessable values across all cookies.
+
+>•&emsp;Analyze whether a parameter's value in the traffic is easily guessable and can be changed in order to gain unauthorized access.
+
+>•&emsp;Especially analyze parameters that are controlling user profiles.
+
+### &emsp;2. <u>Test/Attack phase</u>:
+&emsp; With the information gathered from the discovery and analysis phase, test cases can be derived to test and in essence attempt to attack possible and most common business logic flaws that may exist. Test cases are modeled with the studied attack vectors in mind and each test case may reveal the need to perform more analysis in order to improve a test case or test scenario.
+
+#### &emsp;&emsp;a. <u>Workflow abuse</u>:
+&emsp; It works around lack of constraints and data validation at critical points where the application believes that the data/information can be trusted.
+
+>•&emsp; Does the application allow users to insert "un-validated" data into the system/application?
+
+>•&emsp; Does the application perform validation before performing critical requests?
+
+>•&emsp; Does the application allow users to perform actions outside of the “approved/required” business process flow?
+
+#### &emsp;&emsp;b. <u>Policy and practices exploit</u>:
+&emsp; Policies and practices that have been gathered should be assessed to verify if there exists, loopholes that can be exploited.
+
+>•&emsp; Password recovery options. Does the password recovery option contain a weak link?
+
+>•&emsp; File upload options. Does the application verify upload file types to prevent uploads of malicious files and files the system is not expecting or wanted per the business logic requirements?
+
+>•&emsp; Return/Refund policy options
+
+#### &emsp;&emsp;c. <u>Induction</u>:
+>•&emsp; Does the application allow code validation on the client side? Allowing client side validation allows data to be accessible to an attacker no matter how obfuscated it may be.
+
+>•&emsp; Do parameters have guessable or predictable values (including cookies) that can be tampered with either by increments or by other means (such as changing from False to False)?
+
+>•&emsp; Does the application's file, directory and URL have naming conventions that are guessable enough to access others like it via URL?
+
+>•&emsp; Does the client perform validation before performing critical requests?
+
+#### &emsp;&emsp;d. <u>Repetitive Attacks</u>:
+&emsp; its basis on performing requests repetitively.
+
+>•&emsp; Does the application allow users to exercise its functions more times than required by the business logic workflow?
+
+>•&emsp; Do certain features of the web application allow for the possibility of infinite loop formation without constraints?
+
+#### &emsp;&emsp;e. <u>Insecure design patterns</u>:
+
+>•&emsp; Can the application's timing be predictable or guessable?
+
+>•&emsp; Are there third party application integration, new functionality implementation or reported bugs that can cause an associative vulnerability to the web application?
+
+>•&emsp; Does the application contain token parameters that relate directly to a particular user or group?
+
+>•&emsp; Does the application perform validation before performing requests?
+
+>•&emsp; Does the application allow for unauthorized actions (like privilege escalation)?
+
+>•&emsp; Does the application implement proper data sanitization and normalization of input data?
+
+>•&emsp; Are there certain parameters that are added by the application (through JavaScript)?
+
+
+### &emsp;2. <u>Evaluation phase</u>:
+&emsp; This phase works around the test cases after they have been applied to the web application and to assess the vulnerability of the web application and the risk this imposes on the business process and organization as a whole. Also, the evaluation phase considers possible iteration of the methodology for the purpose of regression testing (in the light of controls implemented or changes made).
 
 
 
