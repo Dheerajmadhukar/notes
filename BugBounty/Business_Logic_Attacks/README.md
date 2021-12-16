@@ -35,10 +35,6 @@
     - [Analysis phase](#Analysis-phase)
     - [Test/Attack phase](#Test/Attack-phase)
     - [Evaluation phase](#Evaluation-phase)
- 
-8. [Web Server Basics](#Web-Server-Basics)
-9. [Computing Fundamentals](#Computing-Fundamentals)
-10. [Hacking Basics](#Hacking-Basics)
 
 ##
 
